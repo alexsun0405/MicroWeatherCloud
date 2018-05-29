@@ -30,7 +30,7 @@ public class WeatherReportController {
 	
 	@GetMapping("/cityId/{cityId}")
 	public ModelAndView getReportByCityId(@PathVariable("cityId") String cityId, Model model) {
-		model.addAttribute("title", "老卫的天气预报");
+		model.addAttribute("title", "天气预报");
 		model.addAttribute("cityId", cityId);
 		//TODO 由城市列表 API 微服务提供数据
         List<City> cityList = dataClient.listCity();
